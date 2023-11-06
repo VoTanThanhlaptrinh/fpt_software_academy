@@ -1,0 +1,83 @@
+/*==Style cơ bản cho website==*/
+body {
+  font-family: sans-serif;
+  color: #333;
+}
+
+/*==Style cho menu===*/
+#menu ul {
+  background: rgb(52, 58, 64);
+  ;
+  list-style-type: none;
+
+}
+
+#menu li {
+  color: #f1f1f1;
+  display: inline-block;
+  text-align: center;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: -5px;
+}
+
+#menu a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+
+#menu a:hover {
+  background: #F1F1F1;
+  color: #333;
+}
+*{
+  box-sizing: border-box;
+}
+
+.container {
+  margin: auto;
+}
+
+/* Định dạng phần tab */
+div.subTab {
+  display: block;
+  float: left;
+  width: 15%;
+  height: 20%;
+}
+
+/* định dạng các thẻ a dại diện cho từng tab */
+div.subTab a {
+  display: block;
+  background-color: inherit;
+  border: 1px solid rgb(166, 156, 142);
+  color: black;
+  padding: 10px 15px;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Đổi màu khi tab được hover */
+div.subTab a:hover {
+  background-color: rgb(166, 156, 142);
+}
+
+/* Đổi màu khi tab được active */
+div.subTab a.active {
+  background-color: rgb(166, 156, 142);
+}
+
+/* Định dạng cho phần nội dung */
+.tabcontent {
+  float: inline-end;
+  width: 70%;
+  border-left: none;
+  height: 300px;
+}
+.left{
+  display: block;
+}
