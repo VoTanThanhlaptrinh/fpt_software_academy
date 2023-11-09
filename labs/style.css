@@ -3,7 +3,10 @@ body {
   font-family: sans-serif;
   color: #333;
 }
-
+p{
+  --font-family-sans-serif: "Source Sans Pro", sans-serif;
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
 /*==Style cho menu===*/
 #menu ul {
   background: rgb(52, 58, 64);
@@ -49,10 +52,10 @@ div.subTab {
 }
 
 /* định dạng các thẻ a dại diện cho từng tab */
-div.subTab a {
+div.subTab a{
   display: block;
   background-color: inherit;
-  border: 1px solid rgb(166, 156, 142);
+  border: 1px solid rgb(52, 58, 64);
   color: black;
   padding: 10px 15px;
   text-align: left;
@@ -63,12 +66,12 @@ div.subTab a {
 
 /* Đổi màu khi tab được hover */
 div.subTab a:hover {
-  background-color: rgb(166, 156, 142);
+  background-color: #F85C70;
 }
 
 /* Đổi màu khi tab được active */
 div.subTab a.active {
-  background-color: rgb(166, 156, 142);
+  background-color: #F85C70;
 }
 
 /* Định dạng cho phần nội dung */
@@ -80,4 +83,15 @@ div.subTab a.active {
 }
 .left{
   display: block;
+}
+button{
+  width: 10% ;
+  height: 7%;
+  background-color: #F85C70;
+  color: black;
+}
+img{
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
 }
