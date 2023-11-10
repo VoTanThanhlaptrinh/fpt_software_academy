@@ -70,35 +70,56 @@
         const menutab = document.querySelectorAll(".tab");
         const tablinks = document.querySelectorAll(".tablinks");
         const tabcontents = document.querySelectorAll(".tabcontent");
-        //ẩn tab con
-        tablinks.forEach(tablinks => {
-            tablinks.style.display = "none";
-        });
+
         // Ẩn tất cả nội dung tab con ban đầu
         tabcontents.forEach(tabcontent => {
             tabcontent.style.display = "none";
         });
-
-        // Xử lý sự kiện khi nhấn vào tab "Lab4"
+        tablinks.forEach(tablinks => {
+            tablinks.style.display = "none";
+        });
+        // Xử lý sự kiện khi nhấn vào tab "menutab"
         menutab.forEach(menutab => {
             menutab.addEventListener("click", () => {
-                // Hiển thị nội dung của tab "Lab4"
+                // Ẩn tất cả nội dung tab con
+                tabcontents.forEach(tabcontent => {
+                    tabcontent.style.display = "none";
+                });
                 tablinks.forEach(tablinks => {
                     tablinks.style.display = "block";
                 });
-                tablinks.forEach((tablink, index) => {
-                    tablink.addEventListener("click", () => {
-                        // Ẩn tất cả nội dung tab
-                        tabcontents.forEach(tabcontent => {
-                            tabcontent.style.display = "none";
-                        });
-                        tabcontents[index].style.display = "block";
-                    });
+                // Trả về màu mặc định cho tất cả tablinks
+                tablinks.forEach(tablink => {
+                    tablink.style.background = "#FFFFFF";
                 });
-            })
+
+                // Hiển thị nội dung của tab "Lab4"
+                tablinks[0].style.background = "#F85C70";
+                tabcontents[0].style.display = "block";
+            });
         });
 
+        // Xử lý sự kiện khi nhấn vào các tab con
+        tablinks.forEach((tablink, index) => {
+            tablink.addEventListener("click", () => {
+                // Ẩn tất cả nội dung tab
+                tabcontents.forEach(tabcontent => {
+                    tabcontent.style.display = "none";
+                });
+
+                // Trả về màu mặc định cho tất cả tablinks
+                tablinks.forEach(tablink => {
+                    tablink.style.background = "#FFFFFF";
+                });
+
+                // In màu và hiển thị nội dung của tab con được chọn
+                tablink.style.background = "#F85C70";
+                tabcontents[index].style.display = "block";
+            });
+        });
     </script>
+
+
 
 </body>
 
