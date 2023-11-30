@@ -16,8 +16,11 @@
 
     <div class="menu" id="menu">
         <ul>
-            <li><a href="/fpt_software_academy/index.html">Home</a></li>
-            <li><a class="tab">Lab4</a></li>
+            <div class="div1">
+                <li><a href="/fpt_software_academy/index.html">Home</a></li>
+                <li><a class="tab" onclick="activateTab(this, 'Lab4')">Lab4</a></li>
+                <li><a class="tab1" onclick="openLab5(); activateTab(this, 'Lab5')">Lab5</a></li>
+            </div>
         </ul>
     </div>
     <div class="left">
@@ -67,10 +70,10 @@
     </div>
     <script>
         // Lấy các tab và nội dung của tab
-        const menutab = document.querySelectorAll(".tab");
-        const tablinks = document.querySelectorAll(".tablinks");
-        const tabcontents = document.querySelectorAll(".tabcontent");
-
+        var lab4 = document.querySelectorAll(".tab");
+        var tablinks = document.querySelectorAll(".tablinks");
+        var tabcontents = document.querySelectorAll(".tabcontent");
+        var lab5 = document.querySelectorAll(".tab1");
         // Ẩn tất cả nội dung tab con ban đầu
         tabcontents.forEach(tabcontent => {
             tabcontent.style.display = "none";
@@ -78,13 +81,10 @@
         tablinks.forEach(tablinks => {
             tablinks.style.display = "none";
         });
+
         // Xử lý sự kiện khi nhấn vào tab "menutab"
-        menutab.forEach(menutab => {
-            menutab.addEventListener("click", () => {
-                // Ẩn tất cả nội dung tab con
-                tabcontents.forEach(tabcontent => {
-                    tabcontent.style.display = "none";
-                });
+        lab4.forEach(lab4 => {
+            lab4.addEventListener("click", () => {
                 tablinks.forEach(tablinks => {
                     tablinks.style.display = "block";
                 });
@@ -92,13 +92,23 @@
                 tablinks.forEach(tablink => {
                     tablink.style.background = "#FFFFFF";
                 });
-
                 // Hiển thị nội dung của tab "Lab4"
                 tablinks[0].style.background = "#F85C70";
                 tabcontents[0].style.display = "block";
             });
-        });
 
+        });
+        //xử lý khi click vào lab5
+        lab5.forEach(lab5 => {
+            lab5.addEventListener("click", () => {
+                tabcontents.forEach(tabcontent => {
+                    tabcontent.style.display = "none";
+                });
+                tablinks.forEach(tablinks => {
+                    tablinks.style.display = "none";
+                });
+            });
+        })
         // Xử lý sự kiện khi nhấn vào các tab con
         tablinks.forEach((tablink, index) => {
             tablink.addEventListener("click", () => {
@@ -117,10 +127,28 @@
                 tabcontents[index].style.display = "block";
             });
         });
+        function openLab5() {
+            window.open('/fpt_software_academy/lab5/index.html', '_blank');
+        }
+        function activateTab(tab, labName) {
+            var allTabs = document.querySelectorAll('.div1 a');
+
+            allTabs.forEach(function (tab) {
+                tab.classList.remove('active');
+            });
+
+            if (!tab.classList.contains('active')) {
+                tab.classList.add('active');
+            }
+
+            if (labName === "Lab5") {
+                var lab4Tab = document.querySelector('.div1 a.tab');
+                if (lab4Tab && lab4Tab.classList.contains('active')) {
+                    lab4Tab.classList.remove('active');
+                }
+            }
+        }
     </script>
-
-
-
 </body>
 
 </html>

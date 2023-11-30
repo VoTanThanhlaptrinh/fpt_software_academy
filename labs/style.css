@@ -3,20 +3,20 @@ body {
   font-family: sans-serif;
   color: #333;
 }
-p{
+
+p {
   --font-family-sans-serif: "Source Sans Pro", sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
+
 /*==Style cho menu===*/
 #menu ul {
   background: rgb(52, 58, 64);
-  ;
   list-style-type: none;
 
 }
 
 #menu li {
-  color: #f1f1f1;
   display: inline-block;
   text-align: center;
   width: 120px;
@@ -26,16 +26,27 @@ p{
 }
 
 #menu a {
+  color: #F1F1F1;
   text-decoration: none;
-  color: #fff;
   display: block;
+  cursor: pointer;
 }
 
 #menu a:hover {
-  background: #F1F1F1;
-  color: #333;
+  background-color: #F85C70;
 }
-*{
+
+.div1 a.tab,
+.div1 a.tab1 {
+  background-color: rgb(52, 58, 64)1;
+}
+
+.div1 a.tab.active,
+.div1 a.tab1.active {
+  background-color: #F85C70;
+}
+
+* {
   box-sizing: border-box;
 }
 
@@ -52,7 +63,7 @@ div.subTab {
 }
 
 /* định dạng các thẻ a dại diện cho từng tab */
-div.subTab a{
+div.subTab a {
   display: block;
   background-color: inherit;
   border: 1px solid rgb(52, 58, 64);
@@ -81,16 +92,19 @@ div.subTab a.active {
   border-left: none;
   height: 300px;
 }
-.left{
+
+.left {
   display: block;
 }
-button{
-  width: 10% ;
+
+button {
+  width: 10%;
   height: 7%;
   background-color: #F85C70;
   color: black;
 }
-img{
+
+img {
   width: 60%;
   height: 60%;
   object-fit: contain;
