@@ -1,0 +1,54 @@
+body {
+    --font-family-sans-serif: "Source Sans Pro", sans-serif;
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+header {
+    display: flex;
+}
+
+.row_a {
+    display: flex;
+    padding-top: 2em;
+}
+.row_a a{
+    font-size: 1.3em;
+}
+.row_a a:hover{
+    color: rgb(20, 126, 197);
+}
+.row_a a.active{
+    color: rgb(20, 126, 197);
+}
+.right{
+    padding-left: 35em;
+}
+.right button{
+    font-size: 1.3em;
+    background-color:#F27405;
+}
+.right button:hover{
+    background-color: rgb(255, 55, 0);
+}
+hr {
+    background-color: #000;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+main{
+    padding-left: 10em;
+    
+}
+main .display-main{
+    display: flex;
+    padding-bottom: 1em;
+}
+main .boder_text{
+    width: 60%;
+    border: groove;
+    padding-right: 1em;
+}
+ .title{
+    font-size: 1.2em; 
+}

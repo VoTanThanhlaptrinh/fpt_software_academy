@@ -1,6 +1,5 @@
-/*==Style cơ bản cho website==*/
+
 body {
-  font-family: sans-serif;
   color: #333;
 }
 
@@ -9,7 +8,6 @@ p {
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-/*==Style cho menu===*/
 #menu ul {
   background: rgb(52, 58, 64);
   list-style-type: none;

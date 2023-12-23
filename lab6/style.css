@@ -1,0 +1,17 @@
+.a1 {
+    color: black;
+}
+
+.a1:hover {
+    background-color: #F85C70;
+    color: black;
+}
+
+span {
+    width: 20em;
+}
+
+button:hover {
+    background-color: #F85C70;
+    color: black;
+}
