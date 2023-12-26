@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab7</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div style="display: flex;">
+                <div class="menu1">
+                    <div><a class="aLeft" href="/fpt_software_academy/labs/lab.html">Labs</a>
+                    </div>
+                    <div><a class="aLeft" href="#1">Trang chủ</a>
+                    </div>
+                    <div>
+                        <a class="aLeft" href="#2">Thông tin</a>
+                    </div>
+                    <div>
+                        <a class="aLeft" href="#3">Biểu mẫu</a>
+                    </div>
+                    <div>
+                        <a class="aLeft" href="#4">Đánh giá</a>
+                    </div>
+                </div>
+                <div style="margin-left: auto;"> <button class="btn-lg buttoncolor" type="button">Đăng ký</button></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="form-size">
+                <div class="boderForm">
+                    <p class="h3">Biểu mẫu đăng ký tài khoản ngân hàng</p>
+                    <div id="buoc1">
+                        <p class="h5"> Bước 1</p>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label fw-bold">1.Họ và tên</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                                placeholder="Họ và tên" autofocus>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label fw-bold">2.Số điện thoại</label>
+                            <input type="number" class="form-control" id="exampleFormControlInput1"
+                                placeholder="Số điện thoại">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label fw-bold">3.Email</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                                placeholder="Tên email @gmail.com">
+                        </div>
+                        <div class="checkModif">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1">
+                                <label class="form-check-label fw-bold" for="flexRadioDefault1">
+                                    Nam
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault2" checked>
+                                <label class="form-check-label fw-bold  " for="flexRadioDefault2">
+                                    Nữ
+                                </label>
+                            </div>
+                        </div>
+                        <div class="div2">
+                            <button type="button" class="btn btn-lg buttoncolor ">Tiếp tục</button>
+
+                        </div>
+                    </div>
+                    <div id="buoc2">
+                        <p class="h5"> Bước 2</p>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label fw-bold">1.Địa chỉ</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Địa chỉ"
+                                autofocus>
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFileMultiple" class="form-label">Ảnh trước CCCD</label>
+                            <input class="form-control" type="file" id="formFileMultiple" multiple>
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFileMultiple" class="form-label">Ảnh sau CCCD</label>
+                            <input class="form-control" type="file" id="formFileMultiple" multiple>
+                        </div>
+                        <div class="container">
+                            <button type="button" class="btn btn-lg buttoncolor ">Đăng ký</button>
+                            <button type="button" class="btn btn-lg buttoncolor ">Quay lại</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script>
+    // Lấy tất cả các thẻ <a>
+    var links = document.querySelectorAll('a');
+
+    // Đặt sự kiện click cho mỗi thẻ <a>
+    links.forEach(function (link) {
+        link.addEventListener('click', function () {
+            // Reset màu sắc của tất cả các thẻ <a>
+            links.forEach(function (otherLink) {
+                otherLink.style.color = 'black';
+            });
+
+            // Đặt màu sắc của thẻ <a> được click
+            this.style.color = 'orange';
+        });
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+        // Bắt sự kiện click cho nút "Tiếp tục"
+        document.getElementById('buoc1').style.display = 'block'; // Hiển thị bước 1 mặc định
+        document.getElementById('buoc2').style.display = 'none'; // Ẩn bước 2 mặc định
+
+        document.querySelector('#buoc1 button').addEventListener('click', function () {
+            // Ẩn bước 1 và hiển thị bước 2 khi nút "Tiếp tục" được click
+            document.getElementById('buoc1').style.display = 'none';
+            document.getElementById('buoc2').style.display = 'block';
+        });
+
+        // Bắt sự kiện click cho nút "Quay lại"
+        document.querySelector('#buoc2 button:nth-child(2)').addEventListener('click', function () {
+            // Ẩn bước 2 và hiển thị bước 1 khi nút "Quay lại" được click
+            document.getElementById('buoc2').style.display = 'none';
+            document.getElementById('buoc1').style.display = 'block';
+        });
+    });
+
+</script>
+
+</html>
